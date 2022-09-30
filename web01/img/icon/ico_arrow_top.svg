@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30">
+    <g data-name="Icons / Arrows / ic-arrows-right">
+        <path data-name="사각형 419" style="fill:none" d="M0 0h30v31H0z" transform="rotate(-90 15 15)"/>
+        <path data-name="선 58" transform="rotate(-90 20.144 4.67)" style="stroke:#c40452;stroke-linecap:round;stroke-linejoin:bevel;stroke-width:1.5px;fill:none" d="M0 0h19.625"/>
+        <path data-name="패스 48" d="M15.45 19.557h0l5.137-5.309a1.322 1.322 0 0 0 0-1.821l-5-5.167" transform="rotate(-90 14.115 12.023)" style="stroke:#c40452;stroke-linecap:round;stroke-linejoin:bevel;stroke-width:1.5px;fill:none"/>
+    </g>
+</svg>

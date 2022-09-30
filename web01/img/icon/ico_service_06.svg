@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <style>
+            .cls-2,.cls-3{fill:none;stroke:#111;stroke-miterlimit:10;stroke-width:2px}.cls-3{stroke-linecap:round}
+        </style>
+    </defs>
+    <g id="그룹_543" transform="translate(-1379 -3531)">
+        <path id="사각형_441" fill="rgba(255,255,255,0)" d="M0 0H64V64H0z" transform="translate(1379 3531)"/>
+        <g id="그룹_202" transform="translate(819 3373)">
+            <ellipse id="타원_45" cx="18" cy="6.5" class="cls-2" rx="18" ry="6.5" transform="translate(585 165)"/>
+            <path id="패스_662" d="M613.318 170v6.441c0 3.557-8.074 6.441-18.035 6.441a48.618 48.618 0 0 1-5.738-.332" class="cls-3" transform="translate(7.938 1.441)"/>
+            <path id="패스_663" d="M611.071 177a3.444 3.444 0 0 1 1.5 2.579v1.288c0 3.558-8.074 6.441-18.035 6.441q-1.229 0-2.417-.057" class="cls-3" transform="translate(8.681 3.458)"/>
+            <path id="패스_664" d="M610.842 182a3.444 3.444 0 0 1 1.5 2.579v1.288c0 3.558-8.074 6.441-18.035 6.441q-.705 0-1.4-.019" class="cls-3" transform="translate(8.91 4.899)"/>
+            <path id="패스_665" d="M611.022 187a3.444 3.444 0 0 1 1.5 2.579v1.288c0 3.558-8.074 6.441-18.035 6.441q-1.119 0-2.2-.048" class="cls-3" transform="translate(8.729 6.34)"/>
+            <path id="패스_666" d="M611.76 192a3.444 3.444 0 0 1 1.5 2.579v1.288c0 3.558-8.074 6.441-18.035 6.441a48.863 48.863 0 0 1-5.5-.3" class="cls-3" transform="translate(7.992 7.781)"/>
+            <circle id="타원_46" cx="18" cy="18" r="18" class="cls-2" transform="translate(562 179)"/>
+            <path id="선_657" d="M0 0L0 3" class="cls-3" transform="translate(585 172)"/>
+            <path id="패스_667" fill="#c40452" d="M16.925 11.952H18.7v1.037h-1.986l-1.478 7.334h-3.187L10.7 12.989H8.709l-1.258 7.333H4.264l-1.449-7.333H.809v-1.037h1.8L1.26 5.069H3.9l1.094 6.882h1.987l1.2-6.882H11.5l1.181 6.882h2.025l1.144-6.882h2.477zm-6.422 0q-.317-1.891-.653-4.56h-.278q-.25 2-.662 4.56zm-5.346 1.037q.317 1.958.662 4.8H6.1q.077-.557.23-1.6.307-2.16.48-3.2zm7.7 0q.394 2.265.71 4.8h.278q.451-3.312.691-4.8z" transform="translate(569.72 185.126)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+    <path data-name="사각형 441" style="fill:transparent" d="M0 0h72v72H0z"/>
+    <g data-name="그룹 13">
+        <path data-name="패스 49" d="M695.631 217.961v-4.315c-3.536-2.757-4.615-6.354-5.754-8.631L687 199.261c0-1.391 2.952-2.9 4.438-1.438s2.816 2.877 2.816 2.877h1.377v-15.823a2.937 2.937 0 0 1 2.947-2.877h-.036a2.847 2.847 0 0 1 2.842 2.877v10.069l10 2.071a5.092 5.092 0 0 1 4.386 5.121v7.192c0 1.618-1.438 2.819-1.438 4.315v4.315z" transform="translate(-648.603 -155.627)" style="stroke:#c40452;fill:none;stroke-miterlimit:10;stroke-width:2px"/>
+        <path data-name="사각형 439" transform="translate(44.493 61.568)" style="stroke:#c40452;fill:none;stroke-miterlimit:10;stroke-width:2px" d="M0 0h22.388v7.836H0z"/>
+        <path data-name="패스 50" d="M699 230.41h-35V166h61.249v33.669" transform="translate(-659.522 -163.761)" style="stroke:#111;fill:none;stroke-miterlimit:10;stroke-width:2px"/>
+        <path data-name="선 59" transform="translate(4.478 10.075)" style="stroke:#111;fill:none;stroke-miterlimit:10;stroke-width:2px" d="M0 0h61.284"/>
+        <path data-name="패스 51" d="M685.823 186.631v5.754H670V178h11.507" transform="translate(-656.891 -158.126)" style="stroke:#111;fill:none;stroke-miterlimit:10;stroke-width:2px"/>
+        <path data-name="사각형 440" transform="translate(12.314 43.414)" style="stroke:#111;fill:none;stroke-miterlimit:10;stroke-width:2px" d="M0 0h16.791v14.553H0z"/>
+        <path data-name="패스 52" d="m673 183.754 4.315 4.315L685.946 178" transform="translate(-655.355 -158.155)" style="stroke:#c40452;fill:none;stroke-miterlimit:10;stroke-width:2px"/>
+        <path data-name="선 60" transform="translate(36.657 21.592)" style="stroke:#111;fill:none;stroke-miterlimit:10;stroke-width:2px" d="M0 0h23.508"/>
+        <path data-name="선 61" transform="translate(36.297 27.284)" style="stroke:#111;fill:none;stroke-miterlimit:10;stroke-width:2px" d="M0 0h6.717"/>
+        <path data-name="선 62" transform="translate(36.297 32.976)" style="stroke:#111;fill:none;stroke-miterlimit:10;stroke-width:2px" d="M0 0h6.717"/>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Icons_Arrows_" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:bevel;stroke-width:1.5px}
+        </style>
+    </defs>
+    <path id="사각형_419" fill="none" d="M0 0H24V24H0z"/>
+    <g id="ic-arrows-right" transform="translate(0 -0.02)">
+        <path id="선_58" d="M0 0L15.7 0" class="cls-2" transform="translate(4.15 12)"/>
+        <path id="패스_48" d="M15.45 16.78l4.11-4.11a1 1 0 0 0 0-1.41l-4-4" class="cls-2"/>
+    </g>
+</svg>
