@@ -29,7 +29,26 @@
     <script src="./js/respond.min.js"></script>
     <!-- jquery 플러그인 연결 -->
     <script src="./js/jquery-1.11.1.js"></script>
-    
+    <link rel="stylesheet" href="./css/reset2.css">
+    <style>
+    /* header.css */
+    .hd { width: 100%; position:fixed; top: 0; left: 0; z-index:999; 
+    background-color: #fff; height: 142px; }
+    .hd:hover { background-color: transparent; }
+    .hd_wrap { width: 1200px; margin: 0 auto;}
+    .logo { display:block; width:148px; height:auto; margin-top:40px; margin-bottom: 40px; float:left; }
+    .logo img { display:block; width: 100%; }
+    .tnb { float:right; margin-top: 40px; margin-bottom: 40px; }
+    .tnb a { font-size:14px; color:#333; padding: 14px; font-weight:300; }
+    .tnb a:hover { font-weight:700; text-decoration: underline; }
+    .gnb { clear:both; }
+    .gnb li { float:left; }
+    .gnb li .sub { display:none; }
+    .gnb > ul > li { width: 20%; text-align: center; }
+    .gnb li .dp1 { display:block; height:40px; line-height: 40px; 
+    background-color: #333; color:#fff; }
+    .gnb li:hover .dp1 { background-color: deepskyblue; }
+    </style>
 </head>
 <body>
 <div class="wrap">
