@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WE DISPLAY</title>
+    <!-- 메타포 -->
+    <meta name="description" content="위 디스플레이에서 다양한 디스플레이 설치사례와 전문업체를 살펴보고 견적을 문의해보세요.">
+    <meta name="keywords" content="WE DISPALY, 위디스플레이, 디스플레이, DISPLAY, 디스플레이그라운드, 디스플레이 플랫폼, 설치 사례, 견적 문의, 키오스크, 전자칠판, 전광판, DID모니터, 사이니지, 미디어파사드, 파사드, LED스크린, 비디오월, OLED, LED, LCD, 투명OLED, 투명디스플레이, 터치모니터, 광고판">
+    <!-- 오픈그래프 -->
+    <meta property="og:site_name" content="WE DISPLAY">
+    <meta property="og:title" content="WE DISPLAY">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="다양한 디스플레이 설치사례와 전문업체를 살펴보고 견적을 문의해보세요.">
+    <meta property="og:image" content="./img/icon/share.png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favi.png">
+    <!-- 각 종 플러그인과 설정 파일 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- 구형 브라우저 html5태그 인식 -->
+    <script src="./js/html5shiv.js"></script>
+    <!-- 구형 브라우저에서 css animation 인식 -->
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+    <script src="./js/respond.min.js"></script>
+    <!-- jquery 플러그인 연결 -->
+    <script src="./js/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="./css/reset2.css">
+    <link rel="stylesheet" href="header.css">
+    <style>
+    /* header.css */
+    .hd { position:fixed; }
+
+    /* content */
+    .vs { clear:both; width: 100%; height:300px; overflow: hidden; }
+    .vs img { display:block; width: 100%; height:auto; }
+    .bread { clear:both; width: 100%; line-height: 60px; border-bottom:3px solid #eee; }
+    .bread_fr { width: 1200px; margin: 0 auto; }
+    .page { clear:both; width: 100%; min-height:100vh;}
+    .page:after { content:""; display:block; clear:both; }
+    .page_wrap { width: 1200px; margin: 0 auto; }
+
+    .page_title { padding-top: 3em; padding-bottom:1em; }
+    .home { color:#333; }
+    .to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
+    background-color:rgba(11,11,11,0.75); color:#fff; display:block; width: 60px;
+    height: 60px; line-height: 60px; text-align: center; font-size:20px; border-radius:32px; visibility:hidden; transition-duration:0.8s; }
+    .to_top:hover { background-color: deepskyblue; }
+    .to_top.on { visibility: visible; }
+
+    .pic_lst { clear:both; width: 100%; }
+    .pic_lst li { width: 30%; float:left; margin-right: 5%; margin-bottom: 60px;
+    position:relative; }
+    .pic_lst li a { display:block; position:relative; }
+    .pic_lst li a .pic_fr { width: 100%; height:450px; overflow:hidden; background-color:#dcdcdc;  }
+    .pic_lst li a img { display:block; width: 100%; height:auto; }
+    .pic_lst li:nth-child(3n) { margin-right: 0; }
+    .pic_tit { line-height:2; overflow:hidden; text-overflow: ellipsis;
+    white-space:nowrap; color:#222; }
+    .pic_com, .pic_info { line-height:2; overflow:hidden; text-overflow: ellipsis;
+    white-space:nowrap; color:#222;  }
+    .sale_price { font-size:16px; font-weight: bold; color:red; }
+    .origin_price { text-decoration: line-through; }
+    .pic_hd { position:absolute; top:0; left: 0; z-index:10; 
+    width: 100%; height:32px; opacity:0.8; text-shadow:2px 2px 0px #fff, 1px 1px 0px #fff;}
+    .ht_ico { display:block; float:left; width:100px; line-height: 32px; height: 32px; padding-left: 10px; padding-top: 10px; color:#333; }
+    .best:before { content:"BEST"; }
+    .new:before { content:"NEW"; }
+    .hit:before { content:"HIT"; }
+    .starating { display:block; float:right; width: 32px; height: 32px; margin-top: 10px; margin-right: 10px; background-image:url("./img/heart.png"); background-repeat: no-repeat; background-size:100% 100%; }
+    .starating.on { background-image:url("./img/heart2.png");  }
+
+    .thumb_lst { width:50%; float:left; margin-bottom: 50px; }
+    .thumb_lst li { clear:both; border-bottom:3px solid #ececec; height: 150px; 
+    border-right:3px solid #ececec; }
+    .thumb_lst li:first-child { border-top:3px solid #ececec; }
+    .thumb_lst li a { display:block; }
+    .thumb_lst li .img_fr { width: 150px; height: 150px; overflow:hidden; float:left; }
+    .thumb_lst li .img_fr img { display:block; width: 100%; height:auto; 
+    margin-top:-28px; }
+    .thumb_lst li .com_fr { padding-left: 30px; float:left; color:#333; }
+    .thumb_tit { line-height: 2.4; text-overflow: ellipsis; overflow: hidden; white-space:nowrap; }
+    .thumb_com { line-height:2; text-overflow: ellipsis; overflow: hidden; white-space:nowrap; }
+    .thumb_price { line-height: 1.8; text-overflow: ellipsis; overflow: hidden; white-space:nowrap; }
+
+    .noti_lst {  width:590px; float:left; }
+    .noti_lst li { clear:both; height:32px; border-bottom:1px solid #333;
+    box-sizing:border-box; }
+    .noti_lst li:first-child { border-top:2px solid #333; }
+    .noti_lst li:last-child { border-bottom:2px solid #333; }
+    .noti_lst li span { display:block; box-sizing:border-box; float:left;
+    line-height: 32px; font-size:14px; }
+    .noti_num { width: 60px; text-align:center; }
+    .not_tit { width: 340px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .item_hd { font-weight:600; }
+    .not_tit.item_hd { text-align: center; }
+    .not_tit a { display: block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-right: 12px; color:#333; }
+    .noti_auth { width: 80px; text-align: center; }
+    .noti_date { width: 110px; text-align: center; }
+
+    .tb_fr { float:right; }
+    .tb { display:table; border-collapse: collapse; }
+    .tb tr { display:table-row; }
+    .tb td, .tb th { display:table-cell; text-align: center; 
+    border-bottom:1px solid #333; line-height: 30px; }
+    .tb td a { display:block; color:#333; overflow:hidden; text-overflow: ellipsis; 
+    white-space:nowrap; padding-right: 10px; width:330px; }
+    .tb .nt_num { width:60px; }
+    .tb .nt_tit { width:340px; }
+    .tb .nt_auth { width: 80px; }
+    .tb .nt_afte { width: 110px; }
+    .tb td.nt_tit { width:340px; text-align: left;}
+    .tb tr:first-child th { border-top:3px solid #333; }
+    .tb tr:last-child td { border-bottom:3px solid #333; }
+
+    .img_box { clear:both; width: 1200px; margin:40px auto;}
+    .img_box_fr { float:right; margin:10px; width: 200px; height: 200px; overflow:hidden; }
+    .img_box_fr img { display:block; width: 100%; height: auto; }
+
+    .page_aside { width: 200px; min-height:500px; float:left; }
+    .year_fr { width: 1000px; min-height:500px; float:right; }
+    .year_lst { clear: both; border-left:1px solid #333; }
+    .year_lst li { clear:both; height: 90px; position:relative; }
+    .year_lst li:before { content:""; display:block; width: 12px; height: 12px; 
+border-radius:8px; background-color:#333; position:absolute; top:0px; left:-6px; z-index:10; }
+    .year_lst li h3, .year_lst li p { padding-left: 30px; }
+
+    .list li { clear:both; line-height: 2.4;  }
+    .list li:before { content:""; display:block; float:left; width: 18px; height: 18px; border:1px solid #333; margin: 10px;  }
+    </style>
+    <link rel="stylesheet" href="footer.css">
+    <script>
+    $(document).ready(function(){
+        $(".to_top").attr("href", location.href);
+        $(window).scroll(function(){
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if(tp>=300){
+                $(".to_top").addClass("on");
+                $(".to_top").attr("href", location.href);
+            } else {
+                $(".to_top").removeClass("on");
+                $(".to_top").attr("href", location.href);
+            }
+        });
+    });    
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="index.html" class="logo"><img src="./img/logo_black.svg" alt="로고"></a>
+            <nav class="tnb">
+                <a href="login.html">로그인</a>
+                <a href="join.html">회원가입</a>
+                <a href="sitemap.html">사이트맵</a>
+            </nav>
+            <nav class="gnb">
+                <ul>
+                    <li class="item1">
+                        <a href="" class="dp1">회사소개</a>
+                        <ul class="sub">
+                            <li><a href="company.html#page1">인사말</a></li>
+                            <li><a href="company.html#page2">회사연혁</a></li>
+                            <li><a href="company.html#page3">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li class="item2">
+                        <a href="" class="dp1">제품소개</a>
+                        <ul class="sub">
+                            <li><a href="product.html#page1">LCD 디스플레이</a></li>
+                            <li><a href="product.html#page2">건물 경관 연출</a></li>
+                            <li><a href="product.html#page3">LED 광고</a></li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="" class="dp1">서비스</a>
+                        <ul class="sub">
+                            <li><a href="service.html#page1">온라인 가이드</a></li>
+                            <li><a href="service.html#page2">최초 설치 서비스</a></li>
+                            <li><a href="service.html#page3">추가 부품 택배 서비스</a></li>
+                            <li><a href="service.html#page4">이동 설치 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li class="item4">
+                        <a href="" class="dp1">고객센터</a>
+                        <ul class="sub">
+                            <li><a href="custom.html#page1">자주하는 질문</a></li>
+                            <li><a href="custom.html#page2">질문 및 답변</a></li>
+                            <li><a href="custom.html#page3">공지사항</a></li>
+                            <li><a href="custom.html#page4">온라인 상담</a></li>
+                        </ul>
+                    </li>
+                    <li class="item5">
+                        <a href="" class="dp1">설치 사례</a>
+                        <ul class="sub">
+                            <li><a href="install.html#page1">기업별</a></li>
+                            <li><a href="install.html#page2">시설별</a></li>
+                            <li><a href="install.html#page3">기기별</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content" id="page1">
+        <figure class="vs">
+            <img src="./img/vs1.jpg" alt="비주얼">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <select name="sel1" id="sel1" class="sel">
+                    <option>회사소개</option>
+                    <option value="product.html#page1">제품소개</option>
+                    <option value="service.html#page1">서비스</option>
+                    <option value="custom.html#page1">고객센터</option>
+                    <option value="install.html#page1">설치사례</option>
+                </select> &gt; 
+                <select name="sel2" id="sel2" class="sel">
+                    <option>인사말</option>
+                    <option value="company.html#page2">회사연혁</option>
+                    <option value="company.html#page3">오시는길</option>
+                </select>
+            </div>
+        </div>
+        <section class="page">
+            <div class="page_wrap">
+                <h2 class="page_title">제품 사진 목록</h2>
+                <div class="con_wrap">
+                    <ul class="pic_lst">
+                        <li>
+                            <a href="">
+                                <div class="pic_fr"><img src="./img/pic1.jpg" alt="pic1"></div>
+                                <div class="pic_hd"><span class="ht_ico best"></span><span class="starating on"></span></div>
+                                <h3 class="pic_tit">카테고리 제목 카테고리 제목 카테고리 제목 카테고리 제목 카테고리 제목 카테고리 제목</h3>
+                                <p class="pic_com">카테고리 설명 카테고리 설명 카테고리 설명 카테고리 설명 카테고리 설명 카테고리 설명 카테고리 설명 카테고리 설명 카테고리 설명 카테고리 설명 카테고리 설명</p>
+                                <p class="pic_info">가격 : <span class="sale_price">24000</span>(<span class="origin_price">30000</span>)</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="pic_fr"><img src="./img/pic2.jpg" alt="pic2"></div>
+                                <div class="pic_hd"><span class="ht_ico best"></span><span class="starating"></span></div>
+                                <h3 class="pic_tit">카테고리 제목</h3>
+                                <p class="pic_com">카테고리 설명</p>
+                                <p class="pic_info">가격 : 30000</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="pic_fr"><img src="./img/pic3.jpg" alt="pic3"></div>
+                                <div class="pic_hd"><span class="ht_ico new"></span><span class="starating on"></span></div>
+                                <h3 class="pic_tit">카테고리 제목</h3>
+                                <p class="pic_com">카테고리 설명</p>
+                                <p class="pic_info">가격 : 30000</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="pic_fr"><img src="./img/pic4.jpg" alt="pic4"></div>
+                                <div class="pic_hd"><span class="ht_ico best"></span><span class="starating"></span></div>
+                                <h3 class="pic_tit">카테고리 제목</h3>
+                                <p class="pic_com">카테고리 설명</p>
+                                <p class="pic_info">가격 : 30000</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="pic_fr"><img src="./img/pic5.jpg" alt="pic5"></div>
+                                <div class="pic_hd"><span class="ht_ico new"></span><span class="starating"></span></div>
+                                <h3 class="pic_tit">카테고리 제목</h3>
+                                <p class="pic_com">카테고리 설명</p>
+                                <p class="pic_info">가격 : 30000</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="pic_fr"><img src="./img/pic6.jpg" alt="pic6"></div>
+                                <div class="pic_hd"><span class="ht_ico hit"></span><span class="starating"></span></div>
+                                <h3 class="pic_tit">카테고리 제목</h3>
+                                <p class="pic_com">카테고리 설명</p>
+                                <p class="pic_info">가격 : 30000</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="pic_fr"><img src="./img/pic7.jpg" alt="pic7"></div>
+                                <div class="pic_hd"><span class="ht_ico new"></span><span class="starating"></span></div>
+                                <h3 class="pic_tit">카테고리 제목</h3>
+                                <p class="pic_com">카테고리 설명</p>
+                                <p class="pic_info">가격 : 30000</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="pic_fr"><img src="./img/pic8.jpg" alt="pic8"></div>
+                                <div class="pic_hd"><span class="ht_ico best"></span><span class="starating"></span></div>
+                                <h3 class="pic_tit">카테고리 제목</h3>
+                                <p class="pic_com">카테고리 설명</p>
+                                <p class="pic_info">가격 : 30000</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <div class="pic_fr"><img src="./img/pic9.jpg" alt="pic9"></div>
+                                <div class="pic_hd"><span class="ht_ico new"></span><span class="starating on"></span></div>
+                                <h3 class="pic_tit">카테고리 제목</h3>
+                                <p class="pic_com">카테고리 설명</p>
+                                <p class="pic_info">가격 : 30000</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <div class="pic_fr"><img src="./img/pic10.jpg" alt="pic10"></div>
+                                <div class="pic_hd"><span class="ht_ico hit"></span><span class="starating"></span></div>
+                                <h3 class="pic_tit">카테고리 제목</h3>
+                                <p class="pic_com">카테고리 설명</p>
+                                <p class="pic_info">가격 : 30000</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <script>
+        $(document).ready(function(){
+            $(".starating").click(function(){
+                if($(this).hasClass("on")){
+                    $(this).removeClass("on");
+                } else {
+                    $(this).addClass("on");
+                }
+            });
+        });    
+        </script>
+    </div>
+    <div class="content" id="page2">
+        <figure class="vs">
+            <img src="./img/vs1.jpg" alt="비주얼">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <select name="sel3" id="sel3" class="sel">
+                    <option>회사소개</option>
+                    <option value="product.html#page1">제품소개</option>
+                    <option value="service.html#page1">서비스</option>
+                    <option value="custom.html#page1">고객센터</option>
+                    <option value="install.html#page1">설치사례</option>
+                </select> &gt; 
+                <select name="sel4" id="sel4" class="sel">
+                    <option selected>회사연혁</option>
+                    <option value="company.html#page1">인사말</option>
+                    <option value="company.html#page3">오시는길</option>
+                </select>
+            </div>
+        </div>
+        <section class="page">
+            <div class="page_wrap">
+                <h2 class="page_title">썸네일 목록</h2>
+                <br>
+                <hr>
+                <br>
+                <ul class="thumb_lst">
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic1.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명1</h3>
+                                <p class="thumb_com">제품설명1</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic2.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명2</h3>
+                                <p class="thumb_com">제품설명2</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic3.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명3</h3>
+                                <p class="thumb_com">제품설명3</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic4.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명4</h3>
+                                <p class="thumb_com">제품설명4</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic5.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명5</h3>
+                                <p class="thumb_com">제품설명5</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic6.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명6</h3>
+                                <p class="thumb_com">제품설명6</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic7.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명7</h3>
+                                <p class="thumb_com">제품설명7</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic8.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명8</h3>
+                                <p class="thumb_com">제품설명8</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic9.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명9</h3>
+                                <p class="thumb_com">제품설명9</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic10.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명10</h3>
+                                <p class="thumb_com">제품설명10</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="thumb_lst">
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic1.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명1</h3>
+                                <p class="thumb_com">제품설명1</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic2.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명2</h3>
+                                <p class="thumb_com">제품설명2</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic3.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명3</h3>
+                                <p class="thumb_com">제품설명3</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic4.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명4</h3>
+                                <p class="thumb_com">제품설명4</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic5.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명5</h3>
+                                <p class="thumb_com">제품설명5</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic6.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명6</h3>
+                                <p class="thumb_com">제품설명6</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic7.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명7</h3>
+                                <p class="thumb_com">제품설명7</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic8.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명8</h3>
+                                <p class="thumb_com">제품설명8</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic9.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명9</h3>
+                                <p class="thumb_com">제품설명9</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/pic10.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명10</h3>
+                                <p class="thumb_com">제품설명10</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <div class="content" id="page3">
+        <figure class="vs">
+            <img src="./img/vs1.jpg" alt="비주얼">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <select name="sel5" id="sel5" class="sel">
+                    <option>회사소개</option>
+                    <option value="product.html#page1">제품소개</option>
+                    <option value="service.html#page1">서비스</option>
+                    <option value="custom.html#page1">고객센터</option>
+                    <option value="install.html#page1">설치사례</option>
+                </select> &gt; 
+                <select name="sel6" id="sel6" class="sel">
+                    <option selected>오시는길</option>
+                    <option value="company.html#page1">인사말</option>
+                    <option value="company.html#page2">회사연혁</option>
+                </select>
+            </div>
+        </div>
+        <section class="page">
+            <div class="page_wrap">
+                <h2 class="page_title">글 목록</h2>
+                <ul class="noti_lst">
+                    <li>
+                        <span class="noti_num item_hd">연번</span>
+                        <span class="not_tit item_hd">제목</span>
+                        <span class="noti_auth item_hd">작성자</span>
+                        <span class="noti_date item_hd">작성일</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">1</span>
+                        <span class="not_tit"><a href="">글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1</a></span>
+                        <span class="noti_auth">김기태</span>
+                        <span class="noti_date">2022-10-18</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">2</span>
+                        <span class="not_tit"><a href="">글 제목2</a></span>
+                        <span class="noti_auth">김기태</span>
+                        <span class="noti_date">2022-10-18</span>
+                    </li>
+                    <li><span class="noti_num">3</span><span class="not_tit"><a href="">글 제목3</a></span><span class="noti_auth">김기태</span><span class="noti_date">2022-10-18</span></li>
+                    <li><span class="noti_num">4</span><span class="not_tit"><a href="">글 제목4</a></span><span class="noti_auth">김기태</span><span class="noti_date">2022-10-18</span></li>
+                    <li><span class="noti_num">5</span><span class="not_tit"><a href="">글 제목5</a></span><span class="noti_auth">김기태</span><span class="noti_date">2022-10-18</span></li>
+                    <li><span class="noti_num">6</span><span class="not_tit"><a href="">글 제목6</a></span><span class="noti_auth">김기태</span><span class="noti_date">2022-10-18</span></li>
+                    <li><span class="noti_num">7</span><span class="not_tit"><a href="">글 제목7</a></span><span class="noti_auth">김기태</span><span class="noti_date">2022-10-18</span></li>
+                    <li><span class="noti_num">8</span><span class="not_tit"><a href="">글 제목8</a></span><span class="noti_auth">김기태</span><span class="noti_date">2022-10-18</span></li>
+                    <li><span class="noti_num">9</span><span class="not_tit"><a href="">글 제목9</a></span><span class="noti_auth">김기태</span><span class="noti_date">2022-10-18</span></li>
+                    <li><span class="noti_num">10</span><span class="not_tit"><a href="">글 제목10</a></span><span class="noti_auth">김기태</span><span class="noti_date">2022-10-18</span></li>
+                </ul>
+                <div class="tb_fr">
+                    <table class="tb">
+                        <thead>
+                            <tr>
+                                <th class="nt_num">연번</th>
+                                <th class="nt_tit">제목</th>
+                                <th class="nt_auth">작성자</th>
+                                <th class="nt_date">작성일</th>
+                            </tr>                            
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="nt_num">1</td>
+                                <td class="nt_tit"><a href="">글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1 글 제목1글 제목1 글 제목1 글 제목1 글 제목1</a></td>
+                                <td class="nt_auth">김기태</td>
+                                <td class="nt_date">2022-10-18</td>
+                            </tr>
+                            <tr>
+                                <td class="nt_num">2</td>
+                                <td class="nt_tit"><a href="">글 제목2</a></td>
+                                <td class="nt_auth">김기태</td>
+                                <td class="nt_date">2022-10-18</td>
+                            </tr>
+                            <tr>
+                                <td class="nt_num">3</td>
+                                <td class="nt_tit"><a href="">글 제목3</a></td>
+                                <td class="nt_auth">김기태</td>
+                                <td class="nt_date">2022-10-18</td>
+                            </tr>
+                            <tr>
+                                <td class="nt_num">4</td>
+                                <td class="nt_tit"><a href="">글 제목4</a></td>
+                                <td class="nt_auth">김기태</td>
+                                <td class="nt_date">2022-10-18</td>
+                            </tr>
+                            <tr>
+                                <td class="nt_num">5</td>
+                                <td class="nt_tit"><a href="">글 제목5</a></td>
+                                <td class="nt_auth">김기태</td>
+                                <td class="nt_date">2022-10-18</td>
+                            </tr>
+                            <tr>
+                                <td class="nt_num">6</td>
+                                <td class="nt_tit"><a href="">글 제목6</a></td>
+                                <td class="nt_auth">김기태</td>
+                                <td class="nt_date">2022-10-18</td>
+                            </tr>
+                            <tr>
+                                <td class="nt_num">7</td>
+                                <td class="nt_tit"><a href="">글 제목7</a></td>
+                                <td class="nt_auth">김기태</td>
+                                <td class="nt_date">2022-10-18</td>
+                            </tr>
+                            <tr>
+                                <td class="nt_num">8</td>
+                                <td class="nt_tit"><a href="">글 제목8</a></td>
+                                <td class="nt_auth">김기태</td>
+                                <td class="nt_date">2022-10-18</td>
+                            </tr>
+                            <tr>
+                                <td class="nt_num">9</td>
+                                <td class="nt_tit"><a href="">글 제목9</a></td>
+                                <td class="nt_auth">김기태</td>
+                                <td class="nt_date">2022-10-18</td>
+                            </tr>
+                            <tr>
+                                <td class="nt_num">10</td>
+                                <td class="nt_tit"><a href="">글 제목10</a></td>
+                                <td class="nt_auth">김기태</td>
+                                <td class="nt_date">2022-10-18</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="page_wrap">
+                <h2 class="page_title">인사말</h2>
+                <div class="img_box">
+                    <div class="img_box_fr"><img src="./img/pic1.jpg" alt="상품1"></div>
+                    여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다.여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다.여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다.여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다.여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다.여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다.여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다. 여기는 상품 설명입니다. 여기는 회사 대표의 인사말입니다. 여기는 회사 대표의 인사말입니다.
+                </div>
+            </div>
+            <div class="page_wrap">
+                <h2 class="page_title">회사연혁</h2>
+                <div class="page_aside">
+                    <h2 class="aside_tit">1970년~</h2>
+                </div>
+                <div class="year_fr">
+                    <ul class="year_lst">
+                        <li>
+                            <h3 class="year_tit">1969. 03.</h3>
+                            <p class="yesr_com">한진상사㈜, 대한항공공사 운영권 인수</p>
+                        </li>
+                        <li>
+                            <h3 class="year_tit">1969. 03.</h3>
+                            <p class="yesr_com">한진상사㈜, 대한항공공사 운영권 인수</p>
+                        </li>
+                        <li>
+                            <h3 class="year_tit">1969. 03.</h3>
+                            <p class="yesr_com">한진상사㈜, 대한항공공사 운영권 인수</p>
+                        </li>
+                        <li>
+                            <h3 class="year_tit">1969. 03.</h3>
+                            <p class="yesr_com">한진상사㈜, 대한항공공사 운영권 인수</p>
+                        </li>
+                        <li>
+                            <h3 class="year_tit">1969. 03.</h3>
+                            <p class="yesr_com">한진상사㈜, 대한항공공사 운영권 인수</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page_wrap">
+                <h2 class="page_title">목록 기호</h2>
+                <div class="list_symbol">
+                    <ul class="list">
+                        <li>목록1</li>
+                        <li>목록2</li>
+                        <li>목록3</li>
+                        <li>목록4</li>
+                        <li>목록5</li>
+                        <li>목록6</li>
+                        <li>목록7</li>
+                        <li>목록8</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+    var sel = document.getElementsByClassName("sel");
+    for(var i=0;i<sel.length;i++){
+        sel[i].addEventListener("change", function(){
+            location.href = this.value;
+        });
+    }
+    </script>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="ft_logo"><img src="./img/logo_ft.svg" alt="하단로고"></div>
+            <div class="mid_box">
+                <nav class="fnb">
+                    <a href="member01.html" class="dpc">개인정보 처리 방침</a>
+                    <a href="member02.html" class="dpc">이용약관</a>
+                    <a href="member03.html">이메일무단수집거부</a>
+                </nav>
+                <p class="addr">
+                    WE DISPLAY | 대표이사 | 정호영 사업자등록번호:120-81-55297<br>
+                    서울시 영등포구 여의대로 128 LG 트윈타워 |admin@wedisplay.solutions<br>
+                    통신판매업신고번호: 제2022-서울영등포-1247호<br>
+                    당 사는 통신판매중개자이며, 통신 판매의 당사자가 아닙니다. 상품 및 거래에 관한 의무와 책임은 판매자에게 있습니다.  
+                </p>
+                <p class="copyright">COPYRIGHT ⓒ LG DISPLAY CO., LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="sel_box">
+                <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+                    <option value="">패밀리 사이트</option>
+                    <option value="https://www.lgdisplay.com/kr">LG Display</option>
+                    <option value="https://kr.oledspace.com">OLED SPACE</option>
+                </select>
+            </div>
+            <script>
+            function sel_link(sel){
+                location.href = sel.value;
+            }
+            </script>
+        </div>
+    </footer>
+</div>
+<a href="" class="to_top">↑</a><!-- .to_top.on -->
+</body>
+</html>
