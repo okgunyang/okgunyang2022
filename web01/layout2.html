@@ -53,8 +53,11 @@
     .to_top.on { visibility: visible; }
 
     #map_canvas { margin-bottom:40px; }
-    #contact p { text-align:left;	padding-left:30px; line-height:30px; margin-top:25px;
-	padding-right:25px; }
+    #contact p { text-align:left;	padding-left:30px; line-height:30px; 
+		margin-top:25px;	padding-right:25px; }
+	.map_tab a { display:inline-block; margin:18px; width:150px;
+	text-align: center; line-height: 36px; background-color: #34283c; color:#fff; 
+	border-radius:8px; }
     </style>
     <link rel="stylesheet" href="footer.css">
     <script>
@@ -975,7 +978,12 @@ google.maps.event.addDomListener(window, 'load', initialize);
 							<li>지도를 넣고자하는 html 문서에 붙여넣기 합니다.</li>
 						</ol>
 					</div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5962.6399372702!2d126.77119283301745!3d37.65864687370668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c8551df24f16b%3A0xdcfb88d27e947ebf!2z7J287IKw64-Z6rWs7LKt!5e0!3m2!1sko!2skr!4v1666084195271!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<div class="map_tab">
+						<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5962.6399372702!2d126.77119283301745!3d37.65864687370668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c8551df24f16b%3A0xdcfb88d27e947ebf!2z7J287IKw64-Z6rWs7LKt!5e0!3m2!1sko!2skr!4v1666084195271!5m2!1sko!2skr" target="g_map">일산 캠퍼스</a> &nbsp; 
+						<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.5692519724917!2d127.02787731558699!3d37.494490036007996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca158ea750d33%3A0xf29e40ea72daaa48!2z642U7KGw7J2A7Lu07ZOo7YSw7JWE7Lm0642w66-47ZWZ7JuQIOqwleuCqOygkA!5e0!3m2!1sko!2skr!4v1666157571832!5m2!1sko!2skr" target="g_map">강남 캠퍼스</a> &nbsp; 
+						<a href="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3162.3922389631284!2d126.98227256558856!3d37.569380431722536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z642U7KGw7J2AIOyiheuhnOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1666157757984!5m2!1sko!2skr" target="g_map">종로 캠퍼스</a>
+					</div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5962.6399372702!2d126.77119283301745!3d37.65864687370668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c8551df24f16b%3A0xdcfb88d27e947ebf!2z7J287IKw64-Z6rWs7LKt!5e0!3m2!1sko!2skr!4v1666084195271!5m2!1sko!2skr" width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="g_map" id="g_map"></iframe>
                 </div>
             </div>
         </section>

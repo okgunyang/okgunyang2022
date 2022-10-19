@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Icons_Time" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px}
+        </style>
+    </defs>
+    <path id="사각형_194" fill="none" d="M0 0H24V24H0z"/>
+    <g id="ic-contact-time">
+        <circle id="타원_26" cx="10.11" cy="10.11" r="10.11" class="cls-2" transform="translate(1.89 1.89)"/>
+        <path id="패스_90" d="M11.93 5.36v6.87h4.85" class="cls-2"/>
+    </g>
+</svg>

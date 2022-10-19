@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WE DISPLAY</title>
+    <!-- 메타포 -->
+    <meta name="description" content="위 디스플레이에서 다양한 디스플레이 설치사례와 전문업체를 살펴보고 견적을 문의해보세요.">
+    <meta name="keywords" content="WE DISPALY, 위디스플레이, 디스플레이, DISPLAY, 디스플레이그라운드, 디스플레이 플랫폼, 설치 사례, 견적 문의, 키오스크, 전자칠판, 전광판, DID모니터, 사이니지, 미디어파사드, 파사드, LED스크린, 비디오월, OLED, LED, LCD, 투명OLED, 투명디스플레이, 터치모니터, 광고판">
+    <!-- 오픈그래프 -->
+    <meta property="og:site_name" content="WE DISPLAY">
+    <meta property="og:title" content="WE DISPLAY">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="다양한 디스플레이 설치사례와 전문업체를 살펴보고 견적을 문의해보세요.">
+    <meta property="og:image" content="./img/icon/share.png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favi.png">
+    <!-- 각 종 플러그인과 설정 파일 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- 구형 브라우저 html5태그 인식 -->
+    <script src="./js/html5shiv.js"></script>
+    <!-- 구형 브라우저에서 css animation 인식 -->
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+    <script src="./js/respond.min.js"></script>
+    <!-- jquery 플러그인 연결 -->
+    <script src="./js/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="./css/reset2.css">
+    <link rel="stylesheet" href="header.css">
+    <style>
+    /* header.css */
+    .hd { position:fixed; }
+
+    /* content */
+    .vs { clear:both; width: 100%; height:300px; overflow: hidden; }
+    .vs img { display:block; width: 100%; height:auto; }
+    .bread { clear:both; width: 100%; line-height: 60px; border-bottom:3px solid #eee; }
+    .bread_fr { width: 1200px; margin: 0 auto; }
+    .page { clear:both; width: 100%; min-height:100vh;}
+    .page:after { content:""; display:block; clear:both; }
+    .page_wrap { width: 1200px; margin: 0 auto; }
+
+    .page_title { padding-top: 3em; padding-bottom:1em; }
+    .home { color:#333; }
+    .to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
+    background-color:rgba(11,11,11,0.75); color:#fff; display:block; width: 60px;
+    height: 60px; line-height: 60px; text-align: center; font-size:20px; border-radius:32px; visibility:hidden; transition-duration:0.8s; }
+    .to_top:hover { background-color: deepskyblue; }
+    .to_top.on { visibility: visible; }
+
+    .pro_ra { display:none; }
+    .ban1 { clear:both; width: 1200px; height:auto; margin:0 auto; overflow-x:hidden; }
+    .ban_img_fr { clear:both; width:5000px; margin-left: 0; transition-duration:0.6s; }
+    #pro_ra1:checked ~ .ban_img_fr { margin-left: 0; }
+    #pro_ra2:checked ~ .ban_img_fr { margin-left:-1200px; }
+    #pro_ra3:checked ~ .ban_img_fr { margin-left:-2400px; }
+    .ban_img_fr:after { content:""; display:block; clear:both; }
+    .ban_img_fr li { float:left; width: 1200px; margin: 0; }
+    .ban_img_fr li img { display:block; width: 100%; height: auto; margin: 0; }
+    .btn_fr { clear:both; }
+    .btn_group.left { float:left; }
+    .btn_group.left label { display:block; width: 20px; height: 20px; background-color:transparent; border:2px solid red; text-indent:-9999px; margin: 8px; cursor:pointer; }
+    #pro_ra1:checked ~ .btn_fr .btn_group.left li.item1 label { background-color:deeppink; }
+    #pro_ra2:checked ~ .btn_fr .btn_group.left li.item2 label { background-color:deeppink; }
+    #pro_ra3:checked ~ .btn_fr .btn_group.left li.item3 label { background-color:deeppink; } 
+    .btn_group.right { float:right; }
+    .btn_group li { float:left; margin: 8px;}
+    .btn_group.right li a { display:block; width: 32px; height: 32px; background-repeat: no-repeat; background-size:32px 32px; }
+    .btn_group.right li.item1 a { background-image: url("./img/icon/ico_naver.png");}
+    .btn_group.right li.item2 a { background-image: url("./img/icon/ico_kakao.png"); }
+    .btn_group.right li.item3 a { background-image: url("./img/icon/ico_url.png"); }
+    .btn_group.right li.item4 a { background-image: url("./img/icon/ico_facebook.png"); }
+
+    .art { width: 600px; float:left; min-height:500px; }
+    .art_com { clear:both; margin-top: 18px; }
+    .art_com span { display:block; background-repeat: no-repeat; background-position:left center; background-size:24px auto; height: 32px; line-height: 32px; padding-left: 30px; float:left; margin-right: 48px; }
+    .art_com span.item1 { background-image: url("./img/icon/ico_view.svg"); }
+    .art_com span.item2 { background-image: url("./img/icon/ico_time.svg"); }
+    .art_com span.item3 { background-image: url("./img/icon/ico_bookmark-s.svg"); }
+    .place_com { clear:both; margin-top: 18px; }
+    .place_com span { clear:both; display:block; line-height: 32px; }
+    .place_com span:before { content:"."; padding-right: 6px; }
+    .place_com span.item1:before { content:".업종 : ";}
+    .place_com span.item2:before { content:".기술 : ";}
+    .place_com span.item3:before { content:".설치지역 : ";}
+    </style>
+    <link rel="stylesheet" href="footer.css">
+    <script>
+    $(document).ready(function(){
+        $(".to_top").attr("href", location.href);
+        $(window).scroll(function(){
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if(tp>=300){
+                $(".to_top").addClass("on");
+                $(".to_top").attr("href", location.href);
+            } else {
+                $(".to_top").removeClass("on");
+                $(".to_top").attr("href", location.href);
+            }
+        });
+    });    
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="index.html" class="logo"><img src="./img/logo_black.svg" alt="로고"></a>
+            <nav class="tnb">
+                <a href="login.html">로그인</a>
+                <a href="join.html">회원가입</a>
+                <a href="sitemap.html">사이트맵</a>
+            </nav>
+            <nav class="gnb">
+                <ul>
+                    <li class="item1">
+                        <a href="" class="dp1">회사소개</a>
+                        <ul class="sub">
+                            <li><a href="company.html#page1">인사말</a></li>
+                            <li><a href="company.html#page2">회사연혁</a></li>
+                            <li><a href="company.html#page3">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li class="item2">
+                        <a href="" class="dp1">제품소개</a>
+                        <ul class="sub">
+                            <li><a href="product.html#page1">LCD 디스플레이</a></li>
+                            <li><a href="product.html#page2">건물 경관 연출</a></li>
+                            <li><a href="product.html#page3">LED 광고</a></li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="" class="dp1">서비스</a>
+                        <ul class="sub">
+                            <li><a href="service.html#page1">온라인 가이드</a></li>
+                            <li><a href="service.html#page2">최초 설치 서비스</a></li>
+                            <li><a href="service.html#page3">추가 부품 택배 서비스</a></li>
+                            <li><a href="service.html#page4">이동 설치 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li class="item4">
+                        <a href="" class="dp1">고객센터</a>
+                        <ul class="sub">
+                            <li><a href="custom.html#page1">자주하는 질문</a></li>
+                            <li><a href="custom.html#page2">질문 및 답변</a></li>
+                            <li><a href="custom.html#page3">공지사항</a></li>
+                            <li><a href="custom.html#page4">온라인 상담</a></li>
+                        </ul>
+                    </li>
+                    <li class="item5">
+                        <a href="" class="dp1">설치 사례</a>
+                        <ul class="sub">
+                            <li><a href="install.html#page1">기업별</a></li>
+                            <li><a href="install.html#page2">시설별</a></li>
+                            <li><a href="install.html#page3">기기별</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content" id="page1">
+        <figure class="vs">
+            <img src="./img/vs1.jpg" alt="비주얼">
+        </figure>
+        <div class="bread">
+            <div class="bread_fr">
+                <a href="index.html" class="home">HOME</a> &gt;
+                <select name="sel1" id="sel1" class="sel">
+                    <option>회사소개</option>
+                    <option value="product.html#page1">제품소개</option>
+                    <option value="service.html#page1">서비스</option>
+                    <option value="custom.html#page1">고객센터</option>
+                    <option value="install.html#page1">설치사례</option>
+                </select> &gt; 
+                <select name="sel2" id="sel2" class="sel">
+                    <option>제품</option>
+                    <option value="layout4.html#pro1">제품1</option>
+                    <option value="layout4.html#pro2">제품2</option>
+                    <option value="layout4.html#pro3">제품3</option>
+                </select>
+            </div>
+        </div>
+        <section class="page">
+            <div class="page_wrap">
+                <h2 class="page_title">제품 상세 페이지</h2>
+                <div class="con_wrap">
+                    <figure class="ban1">
+                        <input type="radio" name="pro_ban" id="pro_ra1" class="pro_ra" checked>
+                        <input type="radio" name="pro_ban" id="pro_ra2" class="pro_ra">
+                        <input type="radio" name="pro_ban" id="pro_ra3" class="pro_ra">
+                        <ul class="ban_img_fr">
+                            <li><img src="./img/pro1.jpg" alt="제품사진1"></li>
+                            <li><img src="./img/pro2.jpg" alt="제품사진2"></li>
+                            <li><img src="./img/pro3.jpg" alt="제품사진3"></li>
+                        </ul>
+                        <div class="btn_fr">
+                            <ul class="btn_group left">
+                                <li class="item1"><label for="pro_ra1">1</label></li>
+                                <li class="item2"><label for="pro_ra2">2</label></li>
+                                <li class="item3"><label for="pro_ra3">3</label></li>
+                            </ul>
+                            <ul class="btn_group right">
+                                <li class="item1"><a href=""></a></li>
+                                <li class="item2"><a href=""></a></li>
+                                <li class="item3"><a href=""></a></li>
+                                <li class="item4"><a href=""></a></li>
+                            </ul>
+                        </div>
+                    </figure>
+                    <div class="real_con_fr">
+                        <article class="art left">
+                            <h2 class="art_tit">디스플레이앤라이프</h2>
+                            <p class="art_com">
+                                <span class="item1">592</span>
+                                <span class="item2">2021.07.18</span>
+                                <span class="item3">1</span>
+                            </p>
+                            <p class="place_com">
+                                <span class="item1">기업</span>
+                                <span class="item2">투명OLED</span>
+                                <span class="item3">서울</span>
+                            </p>
+                        </article>
+                        <article class="art right">
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="ft_logo"><img src="./img/logo_ft.svg" alt="하단로고"></div>
+            <div class="mid_box">
+                <nav class="fnb">
+                    <a href="member01.html" class="dpc">개인정보 처리 방침</a>
+                    <a href="member02.html" class="dpc">이용약관</a>
+                    <a href="member03.html">이메일무단수집거부</a>
+                </nav>
+                <p class="addr">
+                    WE DISPLAY | 대표이사 | 정호영 사업자등록번호:120-81-55297<br>
+                    서울시 영등포구 여의대로 128 LG 트윈타워 |admin@wedisplay.solutions<br>
+                    통신판매업신고번호: 제2022-서울영등포-1247호<br>
+                    당 사는 통신판매중개자이며, 통신 판매의 당사자가 아닙니다. 상품 및 거래에 관한 의무와 책임은 판매자에게 있습니다.  
+                </p>
+                <p class="copyright">COPYRIGHT ⓒ LG DISPLAY CO., LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="sel_box">
+                <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+                    <option value="">패밀리 사이트</option>
+                    <option value="https://www.lgdisplay.com/kr">LG Display</option>
+                    <option value="https://kr.oledspace.com">OLED SPACE</option>
+                </select>
+            </div>
+            <script>
+            function sel_link(sel){
+                location.href = sel.value;
+            }
+            </script>
+        </div>
+    </footer>
+</div>
+<a href="" class="to_top">↑</a><!-- .to_top.on -->
+</body>
+</html>
