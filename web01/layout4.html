@@ -29,7 +29,14 @@
     <script src="./js/respond.min.js"></script>
     <!-- jquery 플러그인 연결 -->
     <script src="./js/jquery-1.11.1.js"></script>
-    <link rel="stylesheet" href="./css/reset2.css">
+    <style>
+    * { margin: 0; padding: 0; }
+    body, html { width:100%; }
+    ul { list-style:none; }
+    a { text-decoration: none; }
+
+    .wrap { width: 100%; clear:both; }
+    </style>
     <link rel="stylesheet" href="header.css">
     <style>
     /* header.css */
@@ -75,7 +82,10 @@
     .btn_group.right li.item3 a { background-image: url("./img/icon/ico_url.png"); }
     .btn_group.right li.item4 a { background-image: url("./img/icon/ico_facebook.png"); }
 
-    .art { width: 600px; float:left; min-height:500px; }
+    .real_con_fr { clear:both; margin:24px auto; border-top:3px solid #ececec; }
+    .real_con_fr:after { content:""; clear:both; display:block; }
+    .art { width: 600px; float:left; min-height:500px; padding-top: 32px; }
+    .art:after { content:""; clear:both; display:block; }
     .art_com { clear:both; margin-top: 18px; }
     .art_com span { display:block; background-repeat: no-repeat; background-position:left center; background-size:24px auto; height: 32px; line-height: 32px; padding-left: 30px; float:left; margin-right: 48px; }
     .art_com span.item1 { background-image: url("./img/icon/ico_view.svg"); }
@@ -87,6 +97,47 @@
     .place_com span.item1:before { content:".업종 : ";}
     .place_com span.item2:before { content:".기술 : ";}
     .place_com span.item3:before { content:".설치지역 : ";}
+
+    .tit1 { font-size: 1.875rem;   font-weight: 700; margin-bottom: 24px; }
+    .tit2 { font-size: 2.375rem;    font-weight: 700; margin-bottom: 12px; padding-bottom: 24px; }
+    .tit3 { margin-bottom: 6px;    font-size: 1rem;    color: #999; padding-bottom: 12px; }
+    .com1 { font-size:1.2rem; padding-bottom: 48px; }
+
+    .tb_fr { clear:both; width: 1200px; border-top:3px solid #ececec; padding-top: 60px;
+    padding-bottom: 60px; }
+    .tb_fr:after {  content:""; clear:both; display:block; }
+    .pro_image { float:left; width: 600px; }
+    .pro_data { float:right; width: 600px; }
+    .tb td { line-height: 2; padding-bottom: 20px; position:relative; 
+    border-bottom:2px solid #ccc; padding-top: 12px; }
+
+    .cate_tit { color:navy; }
+    .color_list { clear:both; }
+    .color_list li { height:58px; float:left; margin: 5px; }
+    .loc_area { position:absolute; right:0px; top:0px;  }
+    .loc_area a { display:block; width: 40px;     height: 40px;
+    border: 0 none;    cursor: pointer;      outline: 0; float:left; margin-left: 8px; }
+    .loc_area a.heart { background: url("./img/icon/ico_panel.png") no-repeat -218px -209px; }
+    .loc_area a.net { background: url("./img/icon/ico_panel.png") no-repeat -306px -209px; }
+
+    .stararea { display:block; width: 112px; height: 24px; overflow:hidden; float:left; }
+    .starpoint { display:block; background-image:url("./img/star1.png"); background-repeat: no-repeat; background-size:125px auto; width: 125px; height: 24px; }
+    .useafter { display:block; font-size:12px; font-weight:500;  color:deepskyblue; float:left; margin-left: 18px; line-height: 24px; margin-top:4px; }
+    .ori_price { font-size:14px; text-decoration: line-through; font-weight: 300; }
+    .ori_price:before { content:"("; }
+    .ori_price:after { content:")"; }
+    .res_price { display:block; font-size: 20px;    line-height: 21px; color:#ae0000; font-weight: 700; }
+    .srbay { font-size:12px; color:deepskyblue; }
+    .gift { border:1px solid #ccc; background-color:#ececec; padding: 1.5rem; margin-top: 14px; }
+    .sales_list { clear:both; padding-left: 24px; }
+    .sales_list li { position:relative; padding-left:10px; font-size:12px; }
+    .sales_list li:before { content:""; display:block; width: 5px; height: 5px; 
+border-radius:4px; background-color: #333; position:absolute; left:0; top:10px; }
+    
+    .in_data, .shopcut, .btn2 { display:block; float:left; width: 180px; line-height: 32px; text-align:center;  margin: 8px; outline:0; border:0; }
+    .btn2 { background-color: #333; color:#fff; cursor:pointer;  }
+    .shopcut { background-color: dodgerblue; color:#fff; height: 32px; cursor:pointer; }
+    .in_data { border:1px solid #ccc; }
     </style>
     <link rel="stylesheet" href="footer.css">
     <script>
@@ -228,10 +279,102 @@
                             </p>
                         </article>
                         <article class="art right">
-
+                            <h3 class="tit1">불가리(BVLGARI)</h3>
+                            <h2 class="tit2">예술의전당 불가리 컬러 전시회</h2>
+                            <h3 class="tit3">고객의 의뢰 배경과 요청 사항</h3>
+                            <p class="com1">불가리의 주요 아이덴티티인 컬러 테마를 전 세계에서 가장 먼저 한국에서 선보이는 전시회로 각 테마별 불가리의 헤리티지 컬렉션 및 LG 올레드 디스플레이로 표현된 다양한 디지털 작품이 전시될 예정입니다. 멀티룸에 설치될 곡면 OLED 비디오월에 투명 OLED를 조합하여 화려한 컬러의 콘텐츠를 생동감 있고 입체적으로 표현하고 싶습니다.</p>
+                            <h3 class="tit3">파트너사가 프로젝트에 담은 전문성</h3>
+                            <p class="com1">곡면 OLED 비디오월 전면에 투명 OLED 2x2 비디오월 4셋트, 총 16대를 설치하였습니다. 베젤 최소화, 케이블 외곽 프레임 매립, 구조물 천장에 구동보드 배치를 통해 투명 OLED의 특징인 개방감을 살렸습니다. 투명 OLED 창문을 통해 '불가리의 계단' 컨텐츠의 화려함과 예술적인 감각을 돋보이게 하면서 방문객들이 오갈 수 있도록 설치하여 직접 투명 디스플레이를 느낄 수 있는 기회를 제공하였습니다.</p>
                         </article>
                     </div>
                 </div>
+            </div>
+            <div class="page_wrap">
+                <article class="tb_fr">
+                    <div class="pro_image">
+                        <img src="./img/pic/data1.png" alt="상품이미지" class="pro_pic">
+                    </div>
+                    <form action="" class="pro_data">
+                        <table class="tb">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h4 class="cate_tit">르엠마</h4>
+                                        <h2 class="pro_tit">르엠마 글리터 롱니트 겨울 원피스</h2>
+                                        <div class="starating">
+                                            <span class="stararea">
+                                                <span class="starpoint"></span>
+                                            </span>
+                                            <span class="useafter">232개 상품평</span>
+                                        </div>
+                                        <div class="loc_area">
+                                            <a href="" class="heart"></a>
+                                            <a href="" class="net"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="price">
+                                            <span class="sales_percent">44%</span>
+                                            <span class="ori_price">59,600원</span>
+                                            <span class="res_price">32,900원</span>
+                                            <span class="send_point">최대 1,645원 적립</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="srbay">무료배송</p>
+                                        <p class="srbay_detail">
+                                            <span class="srbay_time">내일(목) 10/20 도착</span>
+                                            <span class="srbay_order"> (8시간 8분  내 주문 시 / 서울⋅경기 기준)</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="pro_size">사이즈: Free(one size)</p>
+                                        <p class="pro_color"><strong>색상</strong> : 브라운</p>
+                                        <ul class="color_list">
+                                            <li><img src="./img/pic/data_thumb1.png" alt=""></li>
+                                            <li><img src="./img/pic/data_thumb2.png" alt=""></li>
+                                            <li><img src="./img/pic/data_thumb3.png" alt=""></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sr_cash">캐시적립 혜택 상세보기 | 최대 1,645원 적립</p>
+                                        <div class="gift">
+                                            <p>쿠페이 머니 결제 시 1% 적립</p>
+                                            <p>[로켓와우 + 쿠페이 계좌이체] 결제 시 2% 적립</p>
+                                            <p>[로켓와우 + 쿠페이 머니] 결제 시 4% 추가적립 <strong>3053일 남음</strong></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="number" name="amount" id="amount" class="in_data" placeholder="구매 수량 입력">
+                                        <a href="" class="shopcut" class="btn1">장바구니 담기</a>
+                                        <input type="submit" value="바로 구매" class="btn2">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul class="sales_list">
+                                            <li>의류 핏: 기본핏</li>
+                                            <li>색상계열: 브라운계열</li>
+                                            <li>상의 사이즈: 여성 FREE (one size)</li>
+                                            <li>사용계절: 겨울용</li>
+                                            <li>쿠팡상품번호: 2317972828 - 4001310420</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </article>
             </div>
         </section>
     </div>
